@@ -91,6 +91,7 @@ body {
       flex-direction: column;
     }
   }
+  
 
 /* We Provide */
 .text-gray-600 {
@@ -185,7 +186,7 @@ body {
   color: #ffffff;
   font-weight: 500;
   font-size: 1.875rem;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   margin-bottom: 10px;
   margin-bottom: 0; /* Removes or minimizes extra space below */
   padding-bottom: 0; /* Ensures there's no padding adding space */
@@ -252,7 +253,7 @@ body {
 }
 
 .slider img {
-  width: 250px;
+  width: 350px;
   height: auto;
   margin-right: 25px;
   border-radius: 5px;
@@ -264,5 +265,60 @@ body {
   }
   100% {
     transform: translateX(calc(-1 * (250px + 25px) * 7)); /* Adjusted for new image size and spacing */
+  }
+}
+
+/*Games*/
+.games-section {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.games-section h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns */
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.game {
+  width: 100%;
+  height: 100%;
+}
+
+.game img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* Large image for Spider-Man Miles Morales */
+.game.large {
+  grid-column: span 2; /* Makes it span two columns */
+  grid-row: span 2; /* Makes it span two rows */
+}
+
+@media (max-width: 1024px) {
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+  }
+  .game.large {
+    grid-column: span 2; /* Still spans two columns */
+  }
+}
+
+@media (max-width: 600px) {
+  .games-grid {
+    grid-template-columns: 1fr; /* One column on small screens */
+  }
+  .game.large {
+    grid-column: span 1; /* Takes up one column on small screens */
+    grid-row: span 1;
   }
 }
