@@ -180,6 +180,19 @@ body {
 }
 
 /* We provide - Cards*/
+.wyg {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.875rem;
+  margin-bottom: 0; /* Removes or minimizes extra space below */
+  padding-bottom: 0; /* Ensures there's no padding adding space */
+}
+
+.container {
+  margin-top: 0; /* Removes or minimizes extra space below */
+  padding-top: 0; /* Ensures there's no padding adding space */
+}
 .card {
   display: flex; /* Align image and title side by side */
   align-items: center; /* Vertically align the title with the image */
